@@ -1,0 +1,30 @@
+{
+  "name": "zeitadmin-cli",
+  "version": "0.0.0",
+  "description": "offline first command line interface for zeitadmin time tracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Xiphe/zeitadmin-cli.git"
+  },
+  "keywords": [
+    "time",
+    "tracker",
+    "pomodoro",
+    "github"
+  ],
+  "author": "Hannes Diercks <zeitadmin-cli@xiphe.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Xiphe/zeitadmin-cli/issues"
+  },
+  "homepage": "https://github.com/Xiphe/zeitadmin-cli#readme",
+  "devDependencies": {
+    "eslint": "3.12.2",
+    "eslint-config-airbnb-base": "11.0.0",
+    "eslint-plugin-import": "2.2.0"
+  }
+}
