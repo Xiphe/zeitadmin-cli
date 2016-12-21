@@ -20,7 +20,7 @@ module.exports = function start(argv) {
 
   const dbPromise = Promise
     .resolve(getRemoteDbUrl(argv))
-    .then(getDB);
+    .then(getDB(argv.dev ? '-dev' : '-prod'));
 
   const zeitPromise = Promise
     .resolve(argv)

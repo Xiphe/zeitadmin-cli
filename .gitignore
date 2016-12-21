@@ -1,5 +1,7 @@
 bower_components/
 node_modules/
 zeit/
+zeit-dev/
+zeit-prod/
 npm-debug.log
 .DS_Store

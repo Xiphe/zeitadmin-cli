@@ -9,6 +9,6 @@ module.exports = (argv) => {
 
   Promise
     .resolve(getRemoteDbUrl(argv))
-    .then(getDb)
+    .then(getDb(argv.dev ? '-dev' : '-prod'))
     .then(observe(options));
 };

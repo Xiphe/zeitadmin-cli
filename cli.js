@@ -8,7 +8,11 @@ const listConnections = require('./src/listConnections');
 const observe = require('./src/observe');
 const startTimer = require('./src/timer/start');
 
-const argv = minimist(process.argv.slice(2));
+const argv = minimist(process.argv.slice(2), {
+  alias: {
+    'remote-db': 'remoteDB',
+  },
+});
 
 if (argv._[0] === 'setup') {
   return setup(argv);

@@ -3,9 +3,9 @@
 const PouchDB = require('pouchdb');
 const Deferred = require('../Deferred');
 
-module.exports = (remoteDB) => {
+module.exports = dbPostfix => (remoteDB) => {
   const d = new Deferred();
-  const db = new PouchDB('zeit');
+  const db = new PouchDB(`zeit${dbPostfix || ''}`);
 
   db.sync(remoteDB)
     .on('complete', () => {
