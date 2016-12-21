@@ -1,7 +1,10 @@
 'use strict';
 
+const path = require('path');
+const playSound = require('play-sound');
 const Deferred = require('../Deferred');
 const progress = require('./progress');
+
 let currentId = null;
 
 function filter(doc) {
@@ -36,6 +39,7 @@ module.exports = options => (db) => {
         return;
       }
 
+      const player = playSound();
       let prog = null;
 
       const changes = db.changes({
@@ -65,6 +69,9 @@ module.exports = options => (db) => {
 
         prog = progress(change.doc, () => {
           currentId = null;
+
+          player.play(path.resolve(__dirname, '../../aiwha-ding.wav'));
+
           if (!options.tail) {
             changes.cancel();
             db.cancelSync();
