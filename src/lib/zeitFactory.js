@@ -2,10 +2,9 @@
 
 const uuid = require('uuid');
 
-module.exports = gitHubIssue => (user) => {
+module.exports = gitHubIssue => () => {
   const zeit = {
     _id: uuid.v1(),
-    user: user.id,
     issue: {
       title: gitHubIssue.title,
       url: gitHubIssue.html_url,
